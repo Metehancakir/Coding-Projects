@@ -15,7 +15,7 @@ char *binalar[N] = {
     "KonferansSalonu"
 };
 
-/* Guncellenmis komsuluk matrisi */
+
 int graph[N][N] = {
 
    //m f k mk y ss sm r ks
@@ -34,7 +34,7 @@ int graph[N][N] = {
 
 
 
-void bfs(int start, int end) {
+void bfs(int start, int end) { //zaman karmaşıklığı O(V + E) cünkü her düğüm ve kenar en fazla bir kez ziyaret edilir
     int visited[N] = {0};
     int prev[N];
     for (int i = 0; i < N; i++) prev[i] = -1;
@@ -72,7 +72,7 @@ void bfs(int start, int end) {
     printf("\n");
 }
 
-void dfs(int v, int visited[]) {
+void dfs(int v, int visited[]) { //zaman karmaşıklığı O(V + E) cünkü her düğüm ve kenar en fazla bir kez ziyaret edilir
     visited[v] = 1;
     printf("%s ", binalar[v]);
 
